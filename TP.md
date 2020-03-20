@@ -9,15 +9,15 @@ Interfaces d'administration :
 * vCenter : 10.<G>.0.10
 
 Réseau vMotion
-* ESXi1 : 10.<G>.'''1'''.2
-* ESXi2 : 10.<G>.'''1'''.3
-* ESXi3 (si dispo) : 10.<G>.'''1'''.4
+* ESXi1 : 10.<G>.'1''.2
+* ESXi2 : 10.<G>.''1''.3
+* ESXi3 (si dispo) : 10.<G>.''1''.4
 
 Réseau stockage NFS
-* ESXi1 : 10.<G>.'''2'''.2
-* ESXi2 : 10.<G>.'''2'''.3
-* ESXi3 (si dispo) : 10.<G>.'''2'''.4
-* vCenter : 10.<G>.'''2'''.10
+* ESXi1 : 10.<G>.''2''.2
+* ESXi2 : 10.<G>.''2''.3
+* ESXi3 (si dispo) : 10.<G>.''2''.4
+* vCenter : 10.<G>.''2'''.10
 
 
 ## Situation de départ
