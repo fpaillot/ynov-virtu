@@ -1,4 +1,4 @@
-=Groupes
+= Groupes
 * arrieudebat	Antoine	G9
 * gbogbohoundada	Olivier	G9
 * victoras	Nicolas	G9
@@ -26,7 +26,7 @@
 * bagneres	Raphael	
 * etoughe	Anthony	
 
-=Réseaux
+= Réseaux
 * G1 : 10.10.0.0
 * G2 : 10.11.0.0
 * G3 : 10.12.0.0
@@ -40,7 +40,7 @@
 * G11 : -
 * G12 : : 10.21.0.0
 
-=Machines :
+= Machines :
 * ESXi1 : 10.<G>.0.2
 * ESXi2 : 10.<G>.0.3
 * ESXi3 (si dispo) : 10.<G>.0.4
