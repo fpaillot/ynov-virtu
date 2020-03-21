@@ -23,7 +23,6 @@ Réseau stockage NFS
 * ESXi1 : 10.X.**2**.2
 * ESXi2 : 10.X.**2**.3
 * ESXi3 (si dispo) : 10.X.**2**.4
-* vCenter : 10.X.**2**.10
 
 
 Réseau VM :
