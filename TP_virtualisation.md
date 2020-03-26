@@ -1,34 +1,7 @@
-# TP1 Configuration réseau
+# TP1 Configuration réseau : vSwitch et VMkernel
 
 L'objectif de ce TP est la manipulation des différents objets de base utilisés sur ESXi pour la gestion du réseau.
 N'hésitez pars à reprendre le cours pour revoit la terminologie.
-
-
-## Plan d'adressage :
-
-Interfaces d'administration :
-* ESXi1 : 10.X.0.2
-* ESXi2 : 10.X.0.3
-* ESXi3 (si dispo) : 10.X.0.4
-* vCenter : 10.X.0.10
-
-
-Réseau vMotion
-* ESXi1 : 10.X.**1**.2
-* ESXi2 : 10.X.**1**.3
-* ESXi3 (si dispo) : 10.X.**1**.4
-
-
-Réseau stockage NFS
-* ESXi1 : 10.X.**2**.2
-* ESXi2 : 10.X.**2**.3
-* ESXi3 (si dispo) : 10.X.**2**.4
-
-
-Réseau VM :
-* VM1 : 10.X.**3**.2
-* VM2 : 10.X.**3**.3
-* VM3 (si 3 ESXi) : 10.X.**3**.3
 
 ## Situation de départ
 
