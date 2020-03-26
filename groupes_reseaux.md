@@ -40,8 +40,3 @@
 * G11 : -
 * G12 : : 10.21.0.0
 
-# Machines :
-* ESXi1 : 10.<G>.0.2
-* ESXi2 : 10.<G>.0.3
-* ESXi3 (si dispo) : 10.<G>.0.4
-* vCenter : 10.<G>.0.10
