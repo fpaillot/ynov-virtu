@@ -16,9 +16,11 @@ SMKQROWJNQYQSDAAAAAAAAAAAAAA,OUVWXPKBFDUFZGABGAAAAAAAAAAA,
 QFATWPKBFDUFZGABGAAAAAAAAAAA
 ```
 
+
 2. Network
 - Indiquer l'adresse de management du cluster (VIP) et sélectionner l'interace e0c
 - Ne rien entrer pour le Service Processor, le DNS et le NTP
+
 
 3. Support
 - Désactiver les Autosuppot
@@ -26,11 +28,31 @@ QFATWPKBFDUFZGABGAAAAAAAAAAA
 - Ne pas cocher SNMP ou Syslog Server
 - Ne pas activer le Cluster Configuration backup details
 
+
 4. Storage
 - Utiliser les paramètres par défaut pour la création de l'agrégat de disques
+
 
 5. SVM
 - Indiquer "svm0" pour le nom de la SVM
 - Activer le NFS et le iSCSI
 - Indiquer l'IP pour le NFS et sélectionner l'interface e0c
 - Indiquer l'IP pour le iSCSI et sélectionner l'interface e0c
+
+
+# TP2 Configuration iSCSI
+
+* Se connecter à 'interface d'administration
+* Aller dans "Storage > LUNs"
+* Créer un **portset** ; nom : portset1, type : iSCSI, sélectionner la seule interface disponible
+* Céer un **initiator group** ;  nom : ESXi, type : iSCSI, operating system : VMware, portset : portset1, initator : "nom initiateur VMware"
+
+
+* Créer un LUN, nom : lun_1, type : VMware, space reserve : enable, taille : 10Go
+* Créer un nouveau volume ; nom : lun_1_vol, agrégat : par défaut, tiering-policy : aucune
+* Mapper au groupe "ESXi"
+
+
+# TP2 Configuration NFS
+
+* Se connecter à 'interface d'administration
