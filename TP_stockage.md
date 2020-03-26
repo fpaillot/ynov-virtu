@@ -4,7 +4,8 @@
 * Créer le cluster
 * Assigner les disques et créer un agrégat
 * Créer une SVM et configurer les protocoles NFS et iSCSI en respectant le plan d'adressage
-&nbsp  ; 
+
+&nbsp;&nbsp;
 
 1. Cluster
 - Indiquer le nom du cluster
@@ -37,6 +38,7 @@ QFATWPKBFDUFZGABGAAAAAAAAAAA
 - Activer le NFS et le iSCSI
 - Indiquer l'IP pour le NFS et sélectionner l'interface e0c
 - Indiquer l'IP pour le iSCSI et sélectionner l'interface e0c
+
 &nbsp;&nbsp;
 
 # TP2 Configuration iSCSI
@@ -51,7 +53,8 @@ QFATWPKBFDUFZGABGAAAAAAAAAAA
 * Créer un nouveau volume ; nom : lun_1_vol, agrégat : par défaut, tiering-policy : aucune
 * Mapper au groupe "ESXi"
 
+&nbsp;&nbsp;
 
-# TP2 Configuration NFS
+# TP3 Configuration NFS
 
 * Se connecter à 'interface d'administration
