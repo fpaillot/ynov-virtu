@@ -17,7 +17,7 @@ Nous partons de la suiation suivante :
 * Créer un nouveau **vSwitch** nommé "vSwitch1"
 * Rattacher le deuxiéme **uplink** sur ce nouveau **vSwitch**
 * Créer un **portgroup** nommé "vMotion" sur le **vSwitch** "vSwitch0
-* Créer un **portgroup** nommé "NFS" sur le **vSwitch** "vSwitch0"
+* Créer un **portgroup** nommé "stockage" sur le **vSwitch** "vSwitch0"
 * Supprimer le **portgroup** sur le "vSwitch0" nommé "VM network"
 * Créer un **portgroup** "VM Network" sur le "vSwitch1"
 
