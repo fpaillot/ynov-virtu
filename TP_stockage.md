@@ -58,3 +58,19 @@ QFATWPKBFDUFZGABGAAAAAAAAAAA
 # TP3 Configuration NFS
 
 * Se connecter à 'interface d'administration
+* Aller dans "Storage > Volume"
+* Créer un nouveau volume Flexvol ; nom : vol_nfs1, agregat par défaut, type : NAS, taille : 1Ogo, snapshot reserve : 0, space reservation : "Thick"
+
+
+* Aller dans "Storage > SVM"
+* Cliquer sur "SVM settings"
+* Aller dans "Exports Policies"
+* Créer un **export policy** ; nom : ESXi, cliquer sur "Add" pour ajouter les IP de chaque ESX pour NFS (Access protocol : NFS, Allow super user access, sélectionner : Read-only et Read-write **uniquement** pour **Unix**)
+
+
+* Aller dans "Junction Paths"
+* Change les **export policy** pour le point de montage **/** et **vol_nfs1** et sélectionner "ESXi"
+
+&nbsp;&nbsp;
+
+# TP4
