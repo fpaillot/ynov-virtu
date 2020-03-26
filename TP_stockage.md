@@ -69,7 +69,7 @@ QFATWPKBFDUFZGABGAAAAAAAAAAA
 
 
 * Aller dans "Junction Paths"
-* Change les **export policy** pour le point de montage **/** et **vol_nfs1** et sélectionner "ESXi"
+* Changer les **export policy** pour le point de montage **/** et **vol_nfs1** et sélectionner "ESXi"
 
 &nbsp;&nbsp;
 
