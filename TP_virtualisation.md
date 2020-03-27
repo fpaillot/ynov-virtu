@@ -79,9 +79,9 @@ L'accès en administrator c'est bien mais l'accès nominatif, c'est mieux !
   - Noter après le déploiement : l’espace libre, utilisé et alloué pour sur le datastore, la taille du fichier vmdk du disque de la VM
 * Créer « VM2-ESXi(1-3)_thin » : 
   - type linux redhat/Centos 7, disque de 8go en thin, 1Go de RAM
-* Créer « VM1-ESXi(1-3)-thick » :
+* Créer « VM1-ESXi(1-3)_thick » :
   - type linux redha/Centost 7, disque de 10go en thick lazy, 1Go de RAM
-  - Installer un système d’exploitation sur VM1_thin (utiliser le lecteur CD de l'ESXi comme source)
+* Installer un système d’exploitation sur VM1_thin (utiliser le lecteur CD de l'ESXi comme source)
 * Dans le résumé de la machine virtuelle, relevez les informations suivantes :
   - Quel est le statut des VMware Tools ?
   - Quelle est l’IP de la VM ?
