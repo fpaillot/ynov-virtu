@@ -34,6 +34,10 @@ Activer le service **SSH** puis connectez-vous à votre hyperviseur. Utilisez la
 
 # TP2 Configuration réseau : dvSwitch
 
+* Créer un **dvswitch** nommé "DSwitch0", version 6.6.0, nombre de liaisons montantes : 1, I/O Control activé, pas de groupe de port par défaut
+* Détacher l'interface **vmnic1** du "vSwitch1" 
+* Créer un **distributed portgroup** par personne, nommé : gX-VMX, configuration par défaut
+* Utiliser le menu **Ajouter et gérer les hôtes**  (clic droit sur le dvSwitch) et ajouter votre ESXi en utilisant la **vmnic1** libérée précédemment
 
 
 # TP3 Configuration de l'iSCSI
