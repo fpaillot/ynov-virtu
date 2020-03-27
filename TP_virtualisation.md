@@ -71,7 +71,7 @@ L'accès en administrator c'est bien mais l'accès nominatif, c'est mieux !
 &nbsp;&nbsp;
 
 
-TP 5 : Création et modification de machines virtuelles
+# TP 5 : Création et modification de machines virtuelles
 
 * Renomer le datastore de chaque ESXi en datastore-esxi(1-3)
 * Pour chacune des 3 VM à créer ci-dessous :
