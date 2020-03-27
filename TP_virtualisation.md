@@ -33,7 +33,7 @@ Activer le service **SSH** puis connectez-vous à votre hyperviseur. Utilisez la
 
 &nbsp;&nbsp;
 
-# TP3 Rattachement des ESXi au vCenter
+# TP2 Rattachement des ESXi au vCenter
 
 * Se connecter au vCenter
 * Se positionner sur "host and clusters"
