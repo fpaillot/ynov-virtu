@@ -40,6 +40,14 @@ Activer le service **SSH** puis connectez-vous à votre hyperviseur. Utilisez la
 * Utiliser le menu **Ajouter et gérer les hôtes**  (clic droit sur le dvSwitch) et ajouter votre ESXi en utilisant la **vmnic1** libérée précédemment
 
 
+**Validation**
+Si tout est bien configuré, vous devez retrouver :
+* 1 dvSwitch nommé "DSwitch0"
+* 2 ou 3 distributed portgroup nommés : gX-VM(1-3)
+* Sur chaque ESXi dans "Réseaux" (en passant par hôtes et cluster), un "Uplink port group" qui apparait
+
+
+
 # TP3 Configuration de l'iSCSI
 L'objectif de ce TP est d'activer la couche iSCSI logicielle d'ESXi et de se connecter au LUN créé sur le cluster ONTAP
 
