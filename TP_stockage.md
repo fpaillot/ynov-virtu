@@ -8,7 +8,7 @@
 &nbsp;&nbsp;
 
 1. Cluster
-- Indiquer le nom du cluster
+- Indiquer le nom du cluster (gX-ontap)
 - Indiquer un MDP pour l'utilisateur admin (Ingesup33!)
 - Entrer les numéros de licences à utiliser :
 ```
