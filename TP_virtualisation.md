@@ -74,14 +74,14 @@ L'accès en administrator c'est bien mais l'accès nominatif, c'est mieux !
 # TP 5 : Création et modification de machines virtuelles
 
 * Renomer le datastore de chaque ESXi en datastore-esxi(1-3)
-* Pour chacune des 3 VM à créer ci-dessous :
+* Pour chacune des 2 VM à créer ci-dessous :
   - Noter avant le déploiement : l’espace libre, utilisé et alloué pour sur le datastore de votre ESXI
   - Noter après le déploiement : l’espace libre, utilisé et alloué pour sur le datastore, la taille du fichier vmdk du disque de la VM
-* Créer « VM2-ESXi(1-3)_thin » : 
+* Créer « VM1-ESXi(1-3)-thin » (exemple : VM1-ESXi1-thin pour la personne qui l'ESXi1) : 
   - type linux redhat/Centos 7, disque de 8go en thin, 1Go de RAM
-* Créer « VM1-ESXi(1-3)_thick » :
+* Créer « VM2-ESXi(1-3)-thick » (exemple : VM1-ESXi2-thick pour la personne qui l'ESXi1) :
   - type linux redha/Centost 7, disque de 10go en thick lazy, 1Go de RAM
-* Installer un système d’exploitation sur VM1_thin (utiliser le lecteur CD de l'ESXi comme source)
+* Installer un système d’exploitation sur VM1-ESXi(1-3)-thin (utiliser le lecteur CD de l'ESXi comme source)
 * Dans le résumé de la machine virtuelle, relevez les informations suivantes :
   - Quel est le statut des VMware Tools ?
   - Quelle est l’IP de la VM ?
