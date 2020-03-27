@@ -71,7 +71,7 @@ L'accès en administrator c'est bien mais l'accès nominatif, c'est mieux !
 &nbsp;&nbsp;
 
 
-# TP 5 : Création et modification de machines virtuelles
+# TP5 : Création et modification de machines virtuelles
 
 * Renomer le datastore de chaque ESXi en datastore-esxi(1-3)
 * Pour chacune des 2 VM à créer ci-dessous :
@@ -94,7 +94,7 @@ Quel est le module noyau utilisé pour la carte réseau et le disque ?
 
 &nbsp;&nbsp;
 
-# TP 6 : Les snapshots
+# TP6 : Les snapshots
 
 * Arrêter la VM « « VM1-ESXi(1-3)-thin »
 * Sélectionnez une VM et faites un clic droit « Snapshot > Take a snapshot »
@@ -141,7 +141,7 @@ dd if=/dev/urandom of=/root/sample.txt bs=16M count=8
 &nbsp;&nbsp;
 
 
-# TP6 Configuration de l'iSCSI
+# TP7 Configuration de l'iSCSI
 L'objectif de ce TP est d'activer la couche iSCSI logicielle d'ESXi et de se connecter au LUN créé sur le cluster ONTAP
 
 * Aller dans "Stockage > Adaptateur"
@@ -152,7 +152,7 @@ L'objectif de ce TP est d'activer la couche iSCSI logicielle d'ESXi et de se con
 * Créer un **datastore** (banque de données) sur le nouvel espace de stockage disponible, nom : datastore-iscsi, type : VMFS6
 
 
-# TP7 Configuration du NFS
+# TP8 Configuration du NFS
 L'objectif de ce TP est de se connecter au partage NFS créé sur le cluster ONTAP
 
 * Aller dans "Stockage > Banque de données"
