@@ -70,7 +70,32 @@ L'accès en administrator c'est bien mais l'accès nominatif, c'est mieux !
 
 &nbsp;&nbsp;
 
-# TP5 Configuration de l'iSCSI
+
+TP 5 : Création et modification de machines virtuelles
+
+* Renomer le datastore de chaque ESXi en datastore-esxi(1-3)
+* Pour chacune des 3 VM à créer ci-dessous :
+  - Noter avant le déploiement : l’espace libre, utilisé et alloué pour sur le datastore de votre ESXI
+  - Noter après le déploiement : l’espace libre, utilisé et alloué pour sur le datastore, la taille du fichier vmdk du disque de la VM
+* Créer « VM2-ESXi(1-3)_thin » : 
+  - type linux redhat/Centos 7, disque de 8go en thin, 1Go de RAM
+* Créer « VM1-ESXi(1-3)-thick » :
+  - type linux redha/Centost 7, disque de 10go en thick lazy, 1Go de RAM
+  - Installer un système d’exploitation sur VM1_thin (utiliser le lecteur CD de l'ESXi comme source)
+* Dans le résumé de la machine virtuelle, relevez les informations suivantes :
+  - Quel est le statut des VMware Tools ?
+  - Quelle est l’IP de la VM ?
+  - Mémoire hôte utilisée, mémoire invité active
+  - Quel est l'état des VMware tools ?
+
+
+Quel est le module noyau utilisé pour la carte réseau et le disque ?
+
+
+&nbsp;&nbsp;
+
+
+# TP6 Configuration de l'iSCSI
 L'objectif de ce TP est d'activer la couche iSCSI logicielle d'ESXi et de se connecter au LUN créé sur le cluster ONTAP
 
 * Aller dans "Stockage > Adaptateur"
@@ -81,7 +106,7 @@ L'objectif de ce TP est d'activer la couche iSCSI logicielle d'ESXi et de se con
 * Créer un **datastore** (banque de données) sur le nouvel espace de stockage disponible, nom : datastore-iscsi, type : VMFS6
 
 
-# TP6 Configuration du NFS
+# TP7 Configuration du NFS
 L'objectif de ce TP est de se connecter au partage NFS créé sur le cluster ONTAP
 
 * Aller dans "Stockage > Banque de données"
