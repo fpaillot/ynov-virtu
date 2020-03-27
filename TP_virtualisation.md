@@ -94,6 +94,52 @@ Quel est le module noyau utilisé pour la carte réseau et le disque ?
 
 &nbsp;&nbsp;
 
+# TP 6 : Les snapshots
+
+* Arrêter la VM « « VM1-ESXi(1-3)-thin »
+* Sélectionnez une VM et faites un clic droit « Snapshot > Take a snapshot »
+* Donnez le nom que souhaitez
+* Démarrer la VM
+* Créer un répertoire dans la VM
+
+* Arrêter la VM
+* Sélectionnez votre VM faites un clic droit « Snapshot > Snapshot manager »
+* Revenez au snapshot précédent
+* Démarrer la VM
+	- Est-ce que le répertoire existe toujours ?
+
+
+* Répéter les mêmes étapes que précédemment mais cette fois supprimez le snapshot avec le snapshot manager.
+	- Est-ce que le répertoire existe toujours ?
+
+
+* Se positionner sur la VM et noter son « Storage usage »
+* Se positionner sur le DS hébergeant la VM et noter le « Used »
+* Dans la VM lancer la commande suivante pour créer un fichier de 128Mo :
+'''
+dd if=/dev/urandom of=/root/sample.txt bs=16M count=8
+'''
+
+
+* Arrêter la VM
+* Prendre un snapshot de la VM
+* Démarrer la VM
+* Supprimer le fichier /root/sample.txt
+
+
+* Aller dans « Home » -> « Storage »
+* Sélectionner le Datastore qui héberge la VM
+* Aller dans le répertoire portant le nom de la VM.
+	- Que peut-on observer au niveau des fichiers de snapshot VMware ?
+* Se positionner sur la VM et noter son « Storage usage »
+* Se positionner sur le DS hébergeant la VM et noter le « Used »
+* Supprimer le snapshot
+* Se positionner sur la VM et noter son « Storage usage »
+* Se positionner sur le DS hébergeant la VM et noter le « Used »
+	- Que peut-on en conclure ?
+
+&nbsp;&nbsp;
+
 
 # TP6 Configuration de l'iSCSI
 L'objectif de ce TP est d'activer la couche iSCSI logicielle d'ESXi et de se connecter au LUN créé sur le cluster ONTAP
