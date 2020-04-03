@@ -199,17 +199,19 @@ tail -f /var/log/fdm.log
 # TP10 Activation du DRS
 * Faites un clic droit sur votre cluster « Edit settings »
 * Validez la case « Turn on VMware DRS »
-* Dans la section VMware DRS, passez en « Manual »
 
-* Créer 4 VM (Appli1, Appli2, DB1, DB2) de type windows 2008 avec des disques en thin provisionning
-* Vérifier que le DRS est activé sur le cluster en mode « Fully automated »
+* Créer 4 VM (appli1-app1, appl1-app2, appl1-db1, appli1-db2) de type CentOS 7 avec des disques en thin provisionning de 1GO et 512mo de RAM sur les datastore 
+* Créer une régle pour que les "VM appli1-app1" et "appli1-app2" ne fonctionnent pas sur le même hyperviseur 
+* Créer un groupe de VM nommé "appli1-app" et un groupe "appli1-db".
+* Créer une règle de redémarrage "virtual machines to virtual machines" nommé "appli1" pour que le groupe "appli1-app" démarre après le groupe "appli1-db"
 * Créer un groupe DRS nommé « Applications-VM » contenant les machines Appli1 et Appli2
-* Créer un groupe de VM DRS nommé « Databases-VM » contenant les machines DB1 et DB2
-* Créer un groupe d’hôte DRS nommé « DB-host » contenant le serveur ESXi
-* Créer une règle pour que le groupe « Databases-VM » réside si possible sur le groupe d’hôte « DB-hosts »
-* Créer une règle nommée « Split-Application1-VM » qui empêche les VM Appli1 et DB1 de fonctionner sur le même serveur
+* Créer un groupe d’hôte DRS nommé « appli1-db-host » contenant le serveur ESXi1
+* Créer une règle pour que le groupe « appli1-db » réside si possible sur le groupe d’hôte « appl1-db-host »
 
-* Quelle est la taille du « slot de référence » du cluster (visible via le Advanced Runtime info)
+* Démarrer les VM et noter leur placement. Est-il logique ?
+
+* Faites un vMotion de la VM appli1-db2 vers ESXi 2 ou 3
+  - Que constatez-vous ?
 
 
 
