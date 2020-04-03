@@ -102,16 +102,21 @@ Quel est le module noyau utilisé pour la carte réseau et le disque ?
 * Démarrer la VM
 * Créer un répertoire dans la VM
 
+&nbsp;
+
 * Arrêter la VM
 * Sélectionnez votre VM faites un clic droit « Snapshot > Snapshot manager »
 * Revenez au snapshot précédent
 * Démarrer la VM
 	- Est-ce que le répertoire existe toujours ?
 
+&nbsp;
+
 
 * Répéter les mêmes étapes que précédemment mais cette fois supprimez le snapshot avec le snapshot manager.
 	- Est-ce que le répertoire existe toujours ?
 
+&nbsp;
 
 * Se positionner sur la VM et noter son « Storage usage »
 * Se positionner sur le DS hébergeant la VM et noter le « Used »
@@ -119,13 +124,13 @@ Quel est le module noyau utilisé pour la carte réseau et le disque ?
 '''
 dd if=/dev/urandom of=/root/sample.txt bs=16M count=8
 '''
-
+ &nbsp;
 
 * Arrêter la VM
 * Prendre un snapshot de la VM
 * Démarrer la VM
 * Supprimer le fichier /root/sample.txt
-
+&nbsp;
 
 * Aller dans « Home » -> « Storage »
 * Sélectionner le Datastore qui héberge la VM
@@ -151,9 +156,78 @@ L'objectif de ce TP est d'activer la couche iSCSI logicielle d'ESXi et de se con
 * Lancer un "Réanalyser" dans "Adaptateur" puis "Réanalyser" dans "Périphériques"
 * Créer un **datastore** (banque de données) sur le nouvel espace de stockage disponible, nom : datastore-iscsi, type : VMFS6
 
+&nbsp;&nbsp;
+
 
 # TP8 Configuration du NFS
 L'objectif de ce TP est de se connecter au partage NFS créé sur le cluster ONTAP
 
 * Aller dans "Stockage > Banque de données"
 * Créer un **datastore** (banque de données), sélectionner "Monter la banque de données NFS", nom : datastore-nfs, indiquer l'IP NFS de baie ONTAP et le chemin, NFS v3
+
+&nbsp;&nbsp;
+
+
+# TP9 Création du cluster
+
+* Allez dans  "Host and clusters"
+* Faites un clic droit sur le vôtre datacenter  et cliquez sur  "New cluster"
+* Nommez le cluster "cluster-gX" ou X est le numéro de votre groupe
+* Ne pas activer le HA ni le DRS
+* Faites un "transférer vers" de vos hyperviseurs dans le cluster 
+* Connectez-vous en SSH sur vos hyperviseurs
+* Lancez la commande :
+'''
+tail -f /var/log/fdm.log
+'''
+
+* Faites un clic droit sur votre cluster « Edit settings »
+* Validez la case « Turn on VMware HA »
+
+* Quel(s) message(s) observez-vous dans le fichier de log concernant une élection ?
+* Que peut-on en déduire ?
+* Vérifier que le HA est activé sur le cluster
+* Quel est l’état HA de l’ESXi ?
+* Quel est le niveau de « VM restart priority » par défaut du cluster ?
+* Quelle est la « Host isolation response » par défaut du cluster ?
+* Modifier les options d’HA d’une VM,  passer le « VM restart priority » en High
+* Modifier les options d’HA d’une VM, passer le « Host isolation response » à shutdown
+
+&nbsp;&nbsp;
+
+
+# TP10 Activation du DRS
+* Faites un clic droit sur votre cluster « Edit settings »
+* Validez la case « Turn on VMware DRS »
+* Dans la section VMware DRS, passez en « Manual »
+
+* Créer 4 VM (Appli1, Appli2, DB1, DB2) de type windows 2008 avec des disques en thin provisionning
+* Vérifier que le DRS est activé sur le cluster en mode « Fully automated »
+* Créer un groupe DRS nommé « Applications-VM » contenant les machines Appli1 et Appli2
+* Créer un groupe de VM DRS nommé « Databases-VM » contenant les machines DB1 et DB2
+* Créer un groupe d’hôte DRS nommé « DB-host » contenant le serveur ESXi
+* Créer une règle pour que le groupe « Databases-VM » réside si possible sur le groupe d’hôte « DB-hosts »
+* Créer une règle nommée « Split-Application1-VM » qui empêche les VM Appli1 et DB1 de fonctionner sur le même serveur
+
+* Quelle est la taille du « slot de référence » du cluster (visible via le Advanced Runtime info)
+
+
+
+# TP 11 : Création et gestion de ressources pool
+
+* Assurez-vous que toutes vos VM sont arrêtées
+
+* Faites un clic droit sur votre cluster « New Ressource Pool »
+* Nommez-le : « RP-test1 »
+* Laissez les valeurs par défaut
+
+* Créez une machine virtuelle « supercharge1 »avec les caractéristiques suivantes :
+    - 768Mo de RAM, disque de 256 mo en thin provisionning (sur le datastore local), Linux other 64 bits
+* Clonez cette machine en « supercharge2 » et « supercharge3 »
+* Glissez-déposez ces 3 machines dans le ressource pool « RP-test1 »
+* Editez vos machines virtuelles et attachez l’iso « ubcd511.iso » au lecteur CD
+
+* Démarrez les 3 VM
+    - Allez dans « Memory » et lancez « Memtest86+ v4.20 »
+* Observez les valeurs liées à la mémoire dans l’onglet « ressource allocation »
+* Y’a-t-il de la contention ? Que pouvez-vous en déduire ?
