@@ -215,21 +215,5 @@ tail -f /var/log/fdm.log
 
 
 
-# TP 11 : Création et gestion de ressources pool
-
-* Assurez-vous que toutes vos VM sont arrêtées
-
-* Faites un clic droit sur votre cluster « New Ressource Pool »
-* Nommez-le : « RP-test1 »
-* Laissez les valeurs par défaut
-
-* Créez une machine virtuelle « supercharge1 »avec les caractéristiques suivantes :
-    - 768Mo de RAM, disque de 256 mo en thin provisionning (sur le datastore local), Linux other 64 bits
-* Clonez cette machine en « supercharge2 » et « supercharge3 »
-* Glissez-déposez ces 3 machines dans le ressource pool « RP-test1 »
-* Editez vos machines virtuelles et attachez l’iso « ubcd511.iso » au lecteur CD
-
-* Démarrez les 3 VM
-    - Allez dans « Memory » et lancez « Memtest86+ v4.20 »
-* Observez les valeurs liées à la mémoire dans l’onglet « ressource allocation »
+e allocation »
 * Y’a-t-il de la contention ? Que pouvez-vous en déduire ?
