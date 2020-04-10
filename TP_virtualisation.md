@@ -202,9 +202,8 @@ tail -f /var/log/fdm.log
 
 * Créer 4 VM (appli1-app1, appl1-app2, appl1-db1, appli1-db2) de type CentOS 7 avec des disques en thin provisionning de 1GO et 512mo de RAM sur les datastore 
 * Créer une régle pour que les "VM appli1-app1" et "appli1-app2" ne fonctionnent pas sur le même hyperviseur 
-* Créer un groupe de VM nommé "appli1-app" et un groupe "appli1-db".
+* Créer un groupe de VM nommé "appli1-app" avec les VM appli-app* et un groupe "appli1-db" avec les VM appli1-db*
 * Créer une règle de redémarrage "virtual machines to virtual machines" nommé "appli1" pour que le groupe "appli1-app" démarre après le groupe "appli1-db"
-* Créer un groupe DRS nommé « Applications-VM » contenant les machines Appli1 et Appli2
 * Créer un groupe d’hôte DRS nommé « appli1-db-host » contenant le serveur ESXi1
 * Créer une règle pour que le groupe « appli1-db » réside si possible sur le groupe d’hôte « appl1-db-host »
 
