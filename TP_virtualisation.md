@@ -212,7 +212,4 @@ tail -f /var/log/fdm.log
 * Faites un vMotion de la VM appli1-db2 vers ESXi 2 ou 3
   - Que constatez-vous ?
 
-
-
-e allocation »
 * Y’a-t-il de la contention ? Que pouvez-vous en déduire ?
