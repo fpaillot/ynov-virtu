@@ -12,8 +12,6 @@
 * aubert	Melvin	G5
 * kuenemann	Marc	G5
 * sibelait	Théo	G5
-* leveque	Louis	X
-* tricaud	Alexandre X
 * bova	Raphael	G3
 * lefebvre	Thomas	G3
 * dasse	Paulin	G2
@@ -24,7 +22,7 @@
 * coutant	Alex	G10
 * lemzaoueq	Nabil	G10
 * bagneres	Raphael	X
-* etoughe	Anthony	
+* etoughe	Anthony	G4
 
 # Réseaux
 * G1 : 10.10.0.0
