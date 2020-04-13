@@ -8,12 +8,12 @@
 * roy	Thomas	G7
 * yousfi	Chahrazed	G7
 * petit	Yoann	G6
- *sieger	Jonathan	G6
+* sieger	Jonathan	G6
 * aubert	Melvin	G5
 * kuenemann	Marc	G5
 * sibelait	Théo	G5
-* leveque	Louis	G4
-* tricaud	Alexandre	G4
+* leveque	Louis	X
+* tricaud	Alexandre X
 * bova	Raphael	G3
 * lefebvre	Thomas	G3
 * dasse	Paulin	G2
@@ -23,7 +23,7 @@
 * aguer	Julien	G10
 * coutant	Alex	G10
 * lemzaoueq	Nabil	G10
-* bagneres	Raphael	
+* bagneres	Raphael	X
 * etoughe	Anthony	
 
 # Réseaux
